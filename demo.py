@@ -61,15 +61,7 @@ mse = np.mean((test_data['rating'] - test_data['pred']) ** 2)
 print('Test MSE:', mse)
 
 
-# # 绘制原始评分和预测评分的直方图
-# plt.figure(figsize=(8, 8))
-# plt.hist([test_data['rating'], test_data['pred']], label=['Original Ratings', 'Predicted Ratings'], bins=range(1, 7), alpha=0.7)
-# plt.xlabel('Rating')
-# plt.ylabel('Frequency')
-# plt.title('Distribution of Original and Predicted Ratings')
-# plt.legend()
-# plt.grid(True)
-# plt.show()
+
 # 计算预测误差
 test_data['error'] = test_data['rating'] - test_data['pred']
 
